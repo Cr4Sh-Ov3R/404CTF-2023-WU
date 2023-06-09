@@ -1,4 +1,4 @@
-<img align="center" alt="404CTF Hackademint" src="assets/logo.png">
+<img align="center" alt="404CTF 2023 HackademINT" src="https://github.com/HackademINT/404CTF-2023/blob/main/assets/logo.png">
 <h1 align="center">404CTF 2023 - Write Ups</h1>
 
 ****
@@ -25,6 +25,9 @@
 ***Je réalise ici mes premiers Write Ups en espérant que ça puisse servir à tous les curieux qui souhaitent se lancer dans le domaine de la cyber***
 
 Happy Hacking ***Cr4Sh***
-  
+
+****
+**Crédits :**
+ Un énorme merci à tous les membres ayant oeuvré à la réalisation du 404, merci à ***HackademINT*** d'avoir autorisé l'apposition du logo pour illustrer ce document
 
   
