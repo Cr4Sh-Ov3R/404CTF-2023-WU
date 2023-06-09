@@ -58,7 +58,7 @@ Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure
   Bingo, le script de redirection m'empêchant d'accéder à la page est bloqué par le navigateur, la partie 4 s'affiche donc et révèle le flag.
 
 <details>
-  <summary>Flag :<summary>
+  <summary>Flag :</summary>
   <p>*404CTF{N0_frOn1_3nD_auTh3nt1ficAti0n}*</p>
 </details>  
 
