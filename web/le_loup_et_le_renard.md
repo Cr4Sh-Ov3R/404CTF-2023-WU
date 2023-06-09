@@ -57,8 +57,10 @@ Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure
 ![Screen Partie 4 ET FLAG](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part4.png)
   Bingo, le script de redirection m'empêchant d'accéder à la page est bloqué par le navigateur, la partie 4 s'affiche donc et révèle le flag.
 
-  
-Flag : *404CTF{N0_frOn1_3nD_auTh3nt1ficAti0n}*
+<details>
+  <summary>Flag :<summary>
+  <p>*404CTF{N0_frOn1_3nD_auTh3nt1ficAti0n}*</p>
+</details>  
 
 
 ****
