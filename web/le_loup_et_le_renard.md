@@ -16,7 +16,7 @@
 ****
 Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure.
 
-*Partie 1 - Authentification* :
+###*Partie 1 - Authentification* :
 
 ![Screen Partie 1](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part1.png)
 
@@ -25,9 +25,10 @@ Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure
   Avant de lancer quoi que ce soit, je décide d'éxaminer le code à la recherche d'indices potentiels *(commentaires, scripts ...)*.   
 
   En fin de code source, avant la balise fermante </body>, on peut découvrir un script ayant pour fonction de vérifier la validité des champs *username:**admin*** et *password:**h5cf8gf2s5g7d*** ainsi que le liens vers lequel nous serons redirigés */fable/partie-2-cookie* 
-![Screen code source de la page](../assets/le-loup-le-renard/part1-source.png)
+![Screen code source de la page](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part1-source.png)
 
-*Partie 2 - Cookie* :
+
+###*Partie 2 - Cookie* :
 ![Screen Partie 2](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part2.png)
   Une fois la paire username/password renseigné, nous sommes redirigés sur la partie 2.
 
@@ -39,7 +40,7 @@ Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure
   Je décide donc d'essayer de monter en privilège grâce à la valeur *true* et clique sur le bouton valider du formulaire, en laissant les champs vides.
   ![Screen Partie 2 cookie true](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part2-cookieTrue.png)
 
-*Partie 3 - Redirect* :
+###*Partie 3 - Redirect* :
 ![Screen Partie 3](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part3.png)
   Le clic sur le bouton valider m'a maintenant redirigé vers la partie 3 qui contient à nouveau un formulaire.
 
@@ -52,7 +53,7 @@ Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure
 
   Avant de sortie l'artillerie, je décide d'outrepasser ce comportement en bloquant les scripts dans mon navigateur.
 
-*Partie 4 - Flag* :
+###*Partie 4 - Flag* :
 ![Screen Partie 4 ET FLAG](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part4.png)
   Bingo, le script de redirection m'empêchant d'accéder à la page est bloqué par le navigateur, la partie 4 s'affiche donc et révèle le flag.
 
