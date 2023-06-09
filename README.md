@@ -1,4 +1,4 @@
-<img align="center" alt="404CTF 2023 HackademINT" src="https://github.com/HackademINT/404CTF-2023/blob/main/assets/logo.png">
+<img align="center" alt="404CTF 2023 HackademINT" src="https://github.com/HackademINT/404CTF-2023/blob/main/assets/logo.png" width="250" height="250">
 <h1 align="center">404CTF 2023 - Write Ups</h1>
 
 ****
