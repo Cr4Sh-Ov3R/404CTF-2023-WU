@@ -11,14 +11,14 @@
   
   > « Bienvenue ! Prenez place. Il est rare de voir quelqu'un d'attentif à autre chose que sa propre personne ici. C'est dommage, c'est justement ce qu'il y a de plus intéréssant dans ce genre de rassemblement : les autres. Je me présente : Jean de La Fontaine. Votre regard me plait, vous me semblez capable de m'aider sur mon prochain manuscrit. J'écris, voyez-vous ? Des fables, je m'inspire de ce que je vois et j'observe. Pouvez-vous m'aider à écrire la suite de celle-ci ? »
 
-![Screen Chall Web - Intro - Le loup et le renard][https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/chall.png]
+![Screen Chall Web - Intro - Le loup et le renard](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/chall.png)
 
 ****
 Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure.
 
 *Partie 1 - Authentification* :
 
-![Screen Partie 1][https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part1.png]
+![Screen Partie 1](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/le-loup-renard/part1.png)
 
   Une fois cliqué sur le bouton démarrer, nous nous retrouvons sur la partie 1, laquelle contient un formulaire demandant les champs *Nom d'utilisateur / mot de passe*.
 
