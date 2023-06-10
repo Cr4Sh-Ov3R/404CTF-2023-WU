@@ -110,7 +110,7 @@ cr4sh@exemple:~$ echo "eyJ1c2VybmFtZSI6Ik9SMTEiLCJleHAiOjE2ODYzODY3NjB9" | base6
 
 {"username":"OR11","exp":1686386760}
 ```
-> Pour les neophytes, ici -d équivaut à --decode présenter avant
+> Pour les neophytes, ici -d équivaut à --decode présenté avant
 
 J'ai donc mon username *OR11* et la date d'expiration du token (en timestamp)
 
