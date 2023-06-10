@@ -91,7 +91,7 @@ Ok j'ai bien un cookie access-token et une valeur séparée de 3 ".", je teste d
 
 C'est parti sur le bash :
 
-**Partie 1/3** :
+### Partie 1/3 :
 
 ```bash
 cr4sh@exemple:~$ echo "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" | base64 --decode
@@ -103,7 +103,7 @@ Ok, c'est donc un Json Web Token (JWT) en HMAC SHA-256 (HS256).
 
 Je vais sur la doc de JWT afin de voir un peu comment il se décompose : *Header*.*Payload*.*Signature*
 
-**Partie 2/3 - Payload** :
+### Partie 2/3 - Payload :
 
 ```bash
 cr4sh@exemple:~$ echo "eyJ1c2VybmFtZSI6Ik9SMTEiLCJleHAiOjE2ODYzODY3NjB9" | base64 -d
@@ -114,7 +114,7 @@ cr4sh@exemple:~$ echo "eyJ1c2VybmFtZSI6Ik9SMTEiLCJleHAiOjE2ODYzODY3NjB9" | base6
 
 J'ai donc mon username *OR11* et la date d'expiration du token (en timestamp)
 
-## Partie 3 - Signature
+### Partie 3 - Signature
 
 Je me renseigne donc sur la manière de péter une clef de vérification (clef secrète ici en 256bits) mais je n'ai clairement pas les ressources ici, il va donc falloir que je trouve une autre solution.
 
@@ -149,6 +149,7 @@ Je modifie donc maintenant mon cookie avec mon HeaderModifié.PayloadModifié.Ri
 
 Puis retente d'accéder au contenu de la page liste membre, en étant, du fait de la modification, **admin**.
 
+## FLAG
 J'ai désormais bien le nom de la personne que j'avais trouvé précédemment "*Marguerite Yourcenar*" avec le flag. 
 
 <p align="center">
