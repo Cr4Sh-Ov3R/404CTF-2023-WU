@@ -53,7 +53,7 @@ Une fois cliqué sur le lien, sans suprise, le lien est expiré, rien de surpren
 
 On retrouve dans le lien un paramètre expiry qui a le timestamp -5625891076 qui correspond au 21-09-1791 12:38:05. 
 
-J'essaie donc de le passer en au 01-07-2023 23:00:00 ce qui nous donne le timestamp 1688245200
+J'essaie donc de le passer au 01-07-2023 23:00:00 ce qui nous donne le timestamp 1688245200
 
 Raté, j'ai maintenant l'erreur ***Invalid signature***. Le paramètre signature vérifie donc que le timestamp n'ait pas été modifié.
 
