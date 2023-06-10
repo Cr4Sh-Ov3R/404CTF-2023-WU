@@ -16,9 +16,7 @@
   > Interloqué, vous vous rendez compte que l'Académie Française possède un site web. Peut être que la réponse est finalement à portée de tous, voir même plus ... !
 
 <p align="center">
-
-![Screen Chall Web - Facile - L'Académie du détail](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/chall.png)
-
+<img alt="Screen Chall Web - Facile - L'Académie du détail" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/chall.png">
 </p>
 
 
@@ -37,8 +35,9 @@ Bref, plus de questions que de réponses, je décide donc de naviguer sur le sit
 
 > Ça tombe bien, la majorité des choses que j'ai appris sont interdites, y a plus qu'a trouver autre chose.
 
-![Screen Chall Web - Facile - L'Académie du détail - Home page](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/home.png)
-
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Home page" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/home.png">
+</p>
 
 
 ****
@@ -48,8 +47,9 @@ Bref, plus de questions que de réponses, je décide donc de naviguer sur le sit
 Je décide tout de même de tenter l'url /flag (après tout, sait-on jamais) et la **FLAG** ah bah non c'est pas ça : 
 ***202CTF{Bien_tenté_mais_c'est_pas_ça}***
 
-![Screen Chall Web - Facile - L'Académie du détail - Fake Flag](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/fakeFlag.png)
-
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Fake Flag" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/fakeFlag.png">
+</p>
 
 ****
 
@@ -61,15 +61,18 @@ Je me dirige donc vers la page login, qui révèle sans surprise un formulaire d
  - Je tente donc un mot de passe "*1234*" pour voir si le user admin existe, ce qui me révèle *"Mot de passe incorrect"*, j'en déduit donc que le user *admin* existe.
  - le traditionnel ' OR 1=1;-- pour me connecter mais en vain. (enfin pas tout à fait car *je suis maintenant connecté en tant que OR11*)
 
- ![Screen Chall Web - Facile - L'Académie du détail - Home page Identifiée en tant que OR11](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/OR11.png)
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Home page Identifiée en tant que OR11" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/OR11.png">
+</p>
 
 ****
 ## Page Membres
 
 Surpris d'être identifié, je décide d'aller voir la page "*Liste des membres*" qui est apparue dans le menu, mais ce ne sera pas si simple, il faut que j'arrive à être admin.
 
-![Screen Chall Web - Facile - L'Académie du détail - Liste de membres - Patience](https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/patience.png)
-
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Liste de membres - Patience" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/patience.png">
+</p>
 
 Après avoir fait des recherches sur la personne ayant rejoint l'académie à cette date, je tente de flag le prénom_nom de la personne (Marguerite Yourcenar) avec plein de formats différents mais rien ne flag. (Ils ont bien du rire derrière)
 
@@ -81,6 +84,10 @@ Après avoir fait des recherches sur la personne ayant rejoint l'académie à ce
 Je suis identifié, il y a probablement un cookie, go voir les cookies dans mon navigateur. 
 
 Ok j'ai bien un cookie access-token et une valeur séparée de 3 ".", je teste donc de prendre les valeurs séparées et de les décoder de la base64. 
+
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Liste de membres - Token Initial" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/tokenInit.png">
+</p>
 
 C'est parti sur le bash :
 
@@ -124,20 +131,29 @@ Une fois converti en base64, je modifie le payload dans mon navigateur (la parti
 
 Je cherche donc sur la toile et trouve un site m'indiquant que dans le cas où la signature du token n'est pas vérifiée côté serveur, je pouvais tenter un "alg":"none" sans signature après le point suivant le payload sous le format *Header.Payload.*
 
-On a déja modifié le payload, mais mon header est toujours sous algorythme HS256. Je décide de me passer de l'algorythme en passant l'algorythme à none.
+On a déja modifié le payload, mais mon header est toujours sous algorythme HS256. Je décide d'essayer de me passer de l'algorythme en passant l'algorythme à none.
 
 ```bash
 cr4sh@exemple:~$ echo -n '{"alg":"none","typ":"JWT"}' | base64
+
 eyJhbGciOiJub25lIiwgInR5cCI6IkpXVCJ9
 ```
 
-Je modifie donc maintenant mon cookie avec mon HeaderModifié.PayloadModifié.Rien
+Je modifie donc maintenant mon cookie avec mon HeaderModifié.PayloadModifié.RienPourLaSignature
 
 > eyJhbGciOiJub25lIiwgInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjg2Mzg2NzYwfQ.
+
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Liste de membres - Token modifié" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/tokenModifie.png">
+</p>
 
 Puis retente d'accéder au contenu de la page liste membre, en étant, du fait de la modification, **admin**.
 
 J'ai désormais bien le nom de la personne que j'avais trouvé précédemment "*Marguerite Yourcenar*" avec le flag. 
+
+<p align="center">
+<img alt="Screen Chall Web - Facile - L'Académie du détail - Liste de membres - Flag" src="https://github.com/Cr4Sh-Ov3R/404CTF-2023-WU/blob/main/assets/l_academie_du_detail/flag.png">
+</p>
 
 <details>
 <summary>Voir le flag :</summary>
@@ -150,6 +166,7 @@ On entends bien souvent que JWT est inviolable et que c'est le graal de la sécu
 
 Attention cependant, comme tout outil, si la vérification n'est pas faite ou pas de la bonne manière, il est de fait possible de l'outrepasser.
 
+Ce chall m'a également permis de découvrir l'outil CyberChef qui devrait se révéler très utile à l'avenir
 
 ****
 **404CTF 2023** - *Cr4Sh*
