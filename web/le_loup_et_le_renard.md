@@ -83,6 +83,9 @@ Arrivé sur le site, on trouve un bouton qui nous invite à démarrer l'aventure
   <p>404CTF{N0_frOn1_3nD_auTh3nt1ficAti0n}</p>
 </details>  
 
+****
+**Remerciements** :
+Je tenais à remercier 7h30th3r0n3, Ayweth20 pour leurs relecture afin de m'assurer de la cohérence de mon tout premier write up.
 
 ****
 **404CTF 2023** - *Cr4Sh*

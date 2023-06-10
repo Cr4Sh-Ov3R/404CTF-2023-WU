@@ -170,5 +170,9 @@ Attention cependant, comme tout outil, si la vérification n'est pas faite ou pa
 Ce chall m'a également permis de découvrir l'outil CyberChef qui devrait se révéler très utile à l'avenir
 
 ****
+**Remerciements** :
+Merci à 7h30th3r0n3 pour la relecture de ce wu et la découverte, au moment où j'écris ces lignes, de cyber chef en complément du bash pour encoder décoder en base64, et bien d'autres choses
+
+****
 **404CTF 2023** - *Cr4Sh*
 ****
